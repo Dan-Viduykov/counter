@@ -1,25 +1,22 @@
-import { ICounterState } from './../../types/index';
+import { CountState, CounterActions, CounterActionTypes } from './../../types/counter';
 
-const defaultState: ICounterState = {
+const defaultState: CountState = {
     count: 5
 }
 
-const counterReducer = (state = defaultState, action) => {
-    switch (action.type) {
-        case "INCREMENTED_COUNT":
-            return {
-                ...state,
-                count: state.count + action.payload
-            };
-        case "DECREMENTED_COUNT":
-            return {
-                ...state,
-                count: state.count - action.payload
-            };
+const defaultAction: CounterActions = {
+    type: CounterActionTypes.CHANGE_COUNT,
+    payload: 0
+}
 
-        default: 
+export const counterReducer = (state = defaultState, action = defaultAction): CountState => {
+    switch (action.type) {
+        case CounterActionTypes.CHANGE_COUNT:
+            return {
+                count: state.count + action.payload
+            }
+
+        default:
             return state
     }
 }
-
-export default counterReducer

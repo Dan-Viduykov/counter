@@ -1,11 +1,5 @@
-import { createStore, combineReducers } from "redux"
-import counterReducer from "./reducers/counterReducer"
-import asyncCounterReducer from "./reducers/asyncCounterReducer"
-import { composeWithDevTools } from "redux-devtools-extension"
+import { rootReducer } from './reducers/index';
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 
-const rootReducer = combineReducers({
-    counter: counterReducer,
-    asyncCounter: asyncCounterReducer
-})
-
-export const store = createStore(rootReducer, composeWithDevTools())
+export const store = createStore(rootReducer, applyMiddleware(thunk))

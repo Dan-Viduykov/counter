@@ -1,0 +1,70 @@
+/*
+    #444C5C 
+    #CE5A57 
+    #78A5A3 
+    #E1B16A 
+*/
+
+.plane {
+    width: 100vw;
+    height: 100vh;
+    background-color: #78A5A3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plane__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plane__count {
+    padding: 10px 40px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    border: 10px solid #444C5C;
+    color: #E1B16A;
+    font-size: 80px;
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.plane__buttons-list {
+    margin-top: 40px;
+}
+
+.plane__button {
+    padding: 8px 0;
+    width: 100px;
+    margin-right: 20px;
+    background-color: #444C5C;
+    border-radius: 20px;
+    border: 2px solid #E1B16A;
+    color: #E1B16A;
+    font-size: 34px;
+    transition: .4s;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.plane__button:hover {
+    transform: scale(1.1) rotate(5deg) translate(0, -5px);
+    color: #444C5C;
+    background-color: #E1B16A;
+    border-color: #444C5C;
+    outline: none;
+    box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.plane__button:active {
+    transition: .1s;
+    transform: scale(1.05) rotate(4deg) translate(0, -4px);
+    background-color: #bd9356;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.plane__button:last-child {
+    margin: 0;
+}
