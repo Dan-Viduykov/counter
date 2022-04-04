@@ -3,7 +3,8 @@ export interface CountState {
 }
 
 export enum CounterActionTypes {
-    CHANGE_COUNT = 'CHANGE_COUNT'
+    CHANGE_COUNT = 'CHANGE_COUNT',
+    ASYNC_CHANGE_COUNT = 'ASYNC_CHANGE_COUNT'
 }
 
 interface ChangeCountAction {

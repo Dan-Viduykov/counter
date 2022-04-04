@@ -1,15 +1,11 @@
-import { CountState, CounterActions, CounterActionTypes } from './../../types/counter';
+/* eslint-disable @typescript-eslint/default-param-last */
+import { CountState, CounterActionTypes, CounterActions } from './../../types/counter';
 
 const defaultState: CountState = {
     count: 5
 }
 
-const defaultAction: CounterActions = {
-    type: CounterActionTypes.CHANGE_COUNT,
-    payload: 0
-}
-
-export const counterReducer = (state = defaultState, action = defaultAction): CountState => {
+export const counterReducer = (state = defaultState, action: CounterActions): CountState => {
     switch (action.type) {
         case CounterActionTypes.CHANGE_COUNT:
             return {

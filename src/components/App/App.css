@@ -47,9 +47,10 @@
     font-size: 34px;
     transition: .4s;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.plane__button:hover {
+.plane__button--normal:hover {
     transform: scale(1.1) rotate(5deg) translate(0, -5px);
     color: #444C5C;
     background-color: #E1B16A;
@@ -58,7 +59,7 @@
     box-shadow: 3px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-.plane__button:active {
+.plane__button--normal:active {
     transition: .1s;
     transform: scale(1.05) rotate(4deg) translate(0, -4px);
     background-color: #bd9356;
